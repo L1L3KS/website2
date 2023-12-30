@@ -5,6 +5,62 @@ function wf () {
     console.log(result)
 }
 
+
+let x = 10;
+let y = "1";
+let z = "String"
+let d = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+let r = true
+let h = true // yes / так / правда 
+let g = false // no / ні / хиба 
+
+let f = null
+let t = undefined
+let s = NaN
+
+console.log(x == y) 
+
+console.log(x != y)  
+
+console.log(r == +y) 
+
+console.log(x != d)  
+
+console.log(g  == f) 
+
+console.log(t == s)
+
+console.log(x != 10) 
+
+
+console.log(x + y)
+console.log(x - y)
+console.log(x * y)
+console.log(x^y)
+console.log(x/ y)
+
+
+if (x == y) {
+    console.log("X більший за Y")
+} else if (x < y) {
+    console.log("Y більший за X")
+} else {
+    console.log("x дорівнює y")
+}
+
+function oven(a, b){
+    t = 200
+    res = a * b + t
+    return res
+}
+
+let pie = oven(2, 3)
+
+console.log(pie)
+
+
+
+
 function remind () {
     alert ("Знижка 20% на квиток в один бік!")
 }
