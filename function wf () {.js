@@ -32,6 +32,10 @@ console.log(t == s)
 
 console.log(x != 10) 
 
+console.log(x <= y)
+console.log(x >= y)
+console.log(x < y)
+console.log(x > y)
 
 console.log(x + y)
 console.log(x - y)
@@ -40,15 +44,20 @@ console.log(x^y)
 console.log(x/ y)
 
 
-if (x == y) {
+if (x > y) {
     console.log("X більший за Y")
 } else if (x < y) {
     console.log("Y більший за X")
-} else {
+} else{
     console.log("x дорівнює y")
 }
 
-switch(4){
+
+
+
+x = input("Введіть своє число: ")
+
+switch(x){
 case 1:
     console.log("Понеділок") 
 break;
@@ -75,15 +84,18 @@ default:
 }
 
 
+
+
+
+
 function oven(a, b){
-    t = 200
-    res = a * b + t
+    let t = 200
+    let res = a * b + t
     return res
 }
 
 let pie = oven(2, 3)
-
-console.log(pie)
+console.log(pie) // 206
 
 
 
