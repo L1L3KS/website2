@@ -48,6 +48,33 @@ if (x == y) {
     console.log("x дорівнює y")
 }
 
+switch(4){
+case 1:
+    console.log("Понеділок") 
+break;
+
+case 2:
+    console.log("Вівторок")
+break;
+
+case 3:
+    console.log("Середа")
+break;
+
+case 4:
+    console.log("Четвер")
+break;
+
+case 5:
+    console.log("П'ятниця")
+break;
+
+default:
+    console.log("Ти загубився в часі")
+
+}
+
+
 function oven(a, b){
     t = 200
     res = a * b + t
@@ -57,6 +84,9 @@ function oven(a, b){
 let pie = oven(2, 3)
 
 console.log(pie)
+
+
+
 
 
 
@@ -72,11 +102,9 @@ function remind(message) {
 }
 
 setTimeout(function (){remind("Повідомлення")}, 2*60*1000)
+setInterval(function (){remind("Повідомлення")}, 30*60*1000)
 
 send_btn.addEventListener('mouseout', make_colorful)
-
-
-
 
 
 function name(arg){
@@ -89,7 +117,7 @@ console.Log(number+30)
 
 
 let val = "12"
-switch (+val>10) {
+switch (+4>10) {
     case 11:
         console.log("Arg = 11!")
     break;
