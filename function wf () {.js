@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 function wf () {
     let number1 = 5
     let number2 = 10
@@ -59,7 +58,6 @@ function remind() {
 }
 let krosivki = document.getElementById("vapormax")
 krosivki.addEventListener("mouseover", remind())
-=======
 function wf () {
     let number1 = 5
     let number2 = 10
@@ -176,4 +174,4 @@ function remind() {
 }
 let krosivki = document.getElementById("vapormax")
 krosivki.addEventListener("mouseover", remind())
->>>>>>> bb5a506c538ea1543ef8200a9c7075662519fcf7
+
