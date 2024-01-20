@@ -1,4 +1,4 @@
-
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -258,7 +258,7 @@
     <main>
         <div class="parallax-container">
             <div class="parallax">
-                <a href="signin.html" class="friday">
+                <a href="Untitled-1.html" class="friday">
                     <p class="textfriday">Black Friday</p>
                     <p class="textfriday">SAVE UP TO 60%</p>
                     <img src="Nike-Logo-PNG-Clipart.png" class="logo-f">
@@ -442,6 +442,75 @@
     serwerws
     </footer>
 <script src="JS.js"></script>
+
+
+<script>
+
+// порвенути(вивести) всі продукти 
+fetch("https://fakestoreapi.com/products")
+  .then((res) => res.json())
+  .then((json) => console.log(json));
+
+  // додати елемент 
+  fetch("https://fakestoreapi.com/products", {
+  method: "POST",
+  body: JSON.stringify({
+    title: "test product",
+    price: 13.5,
+    description: "lorem ipsum set",
+    image: "https://i.pravatar.cc",
+    category: "electronic",
+  }),
+})
+  .then((res) => res.json())
+  .then((json) => console.log(json));
+
+
+  fetch("https://fakestoreapi.com/products/8", {
+  method: "DELETE",
+});
+
+
+// порвенути(вивести) всі продукти 
+fetch("https://fakestoreapi.com/products")
+  .then((res) => res.json())
+  .then((json) => console.log(json));
+
+
+//   // оновити продукт 
+//   fetch("https://fakestoreapi.com/products/7", {
+//   method: "PUT",
+//   body: JSON.stringify({
+//     title: "test product",
+//     price: 13.5,
+//     description: "lorem ipsum set",
+//     image: "https://i.pravatar.cc",
+//     category: "electronic",
+//   }),
+// })
+//   .then((res) => res.json())
+//   .then((json) => console.log(json));
+
+
+//   fetch("https://fakestoreapi.com/products/8", {
+//   method: "PATCH",
+//   body: JSON.stringify({
+//     title: "test product",
+//     price: 13.5,
+//     description: "lorem ipsum set",
+//     image: "https://i.pravatar.cc",
+//     category: "electronic",
+//   }),
+// })
+//   .then((res) => res.json())
+//   .then((json) => console.log(json));
+
+
+
+
+</script>
+
+
 
 </body>
 </html>

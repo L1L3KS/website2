@@ -114,6 +114,7 @@ function remind(message) {
 }
 
 setTimeout(function (){remind("Повідомлення")}, 2*60*1000)
+
 setInterval(function (){remind("Повідомлення")}, 30*60*1000)
 
 send_btn.addEventListener('mouseout', make_colorful)
