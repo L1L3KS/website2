@@ -216,13 +216,17 @@
         
     </main>
     <footer>
-    nothing
+        <div id = "ebook">
+            <img src="">
+            <p>Опис книжки</p>
+            <p>Ціна: 300 грн</p>
+          </div>
     </footer>
 <script src="JS.js"></script>
 
 <script>
 
-// порвенути(вивести) всі продукти 
+/* порвенути(вивести) всі продукти 
 fetch("https://fakestoreapi.com/products")
   .then((res) => res.json())
   .then((json) => console.log(json));
@@ -279,8 +283,30 @@ fetch("https://fakestoreapi.com/products")
 //   }),
 // })
 //   .then((res) => res.json())
-//   .then((json) => console.log(json));
+//   .then((json) => console.log(json));*/
 
+const ebook = documnet.getElementById('ebook')
+const bookElement = documnet.createElement("div");
+
+ebook.dispaly.backdround = 'green';
+ebook.appendChild(bookElement);
+
+
+
+fetch("https://fakestoreapi.com/products", {
+    method:"GET",
+
+    body: JSON.stringify({
+    title: "test product",
+    price: 13.5,
+    description: "lorem ipsum set",
+    image: "https://i.pravatar.cc",
+    category: "electronic",
+    })
+})
+    .then((res)=> res.json())
+    .then((json) => let content = json)
+    .then(console.log(content))
 
 
 
