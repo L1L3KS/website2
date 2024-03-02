@@ -13,7 +13,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
         <a href=""><img src="Logo_NIKE.svg.png" class="logo"></a>
-        <div class="verh">
+        <div class="verh" id="verh">
             <!-- <img src="Nike-Logo.png" class="logo"> -->
 
             <a href="" class="verh-a">Home</a>
@@ -224,7 +224,72 @@
     </footer>
 <script src="JS.js"></script>
 
+
+
+<script type="module"> 
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js';
+import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js';
+import { getDatabase, ref, set, push } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js';
+
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+        apiKey: "AIzaSyDXWis1cDjxmEhvXiRVTch-UrCuZPHhcUo",
+        authDomain: "moviedata-c72dc.firebaseapp.com",
+        databaseURL: "https://moviedata-c72dc-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "moviedata-c72dc",
+        storageBucket: "moviedata-c72dc.appspot.com",
+        messagingSenderId: "9143026643",
+        appId: "1:9143026643:web:e8ff3aa8aaf5cede10e526"
+        };
+
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getDatabase(app);
+
+        // Function to create a user
+        function createUser(email, password) {
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    console.log("New user created", userCredential.user);
+                })
+                .catch((error) => {
+                    console.error("Error creating user:", error.code, error.message);
+                });
+        }
+
+        // Example usage:
+        createUser('kravchenkobohdan342gmail.com', 'qwerty1234');
+
+
+
+
+
+        
+
+
+</script>
+
+
+
+
+
+
 <script>
+
+
+let verh = document.getElementById("verh");
+let newE = document.createElement("a");
+let newEcontent = document.createTextNode("Our team");
+newE.href = "#";
+newE.className = "verh-a";
+
+verh.appendChild(newE)
+newE.appendChild(newEcontent)
 
 /* порвенути(вивести) всі продукти 
 fetch("https://fakestoreapi.com/products")
@@ -285,28 +350,28 @@ fetch("https://fakestoreapi.com/products")
 //   .then((res) => res.json())
 //   .then((json) => console.log(json));*/
 
-const ebook = documnet.getElementById('ebook')
-const bookElement = documnet.createElement("div");
+// const ebook = documnet.getElementById('ebook')
+// const bookElement = documnet.createElement("div");
 
-ebook.dispaly.backdround = 'green';
-ebook.appendChild(bookElement);
+// ebook.dispaly.backdround = 'green';
+// ebook.appendChild(bookElement);
 
 
 
-fetch("https://fakestoreapi.com/products", {
-    method:"GET",
+// fetch("https://fakestoreapi.com/products", {
+//     method:"GET",
 
-    body: JSON.stringify({
-    title: "test product",
-    price: 13.5,
-    description: "lorem ipsum set",
-    image: "https://i.pravatar.cc",
-    category: "electronic",
-    })
-})
-    .then((res)=> res.json())
-    .then((json) => let content = json)
-    .then(console.log(content))
+//     body: JSON.stringify({
+//     title: "test product",
+//     price: 13.5,
+//     description: "lorem ipsum set",
+//     image: "https://i.pravatar.cc",
+//     category: "electronic",
+//     })
+// })
+//     .then((res)=> res.json())
+//     .then((json) => let content = json)
+//     .then(console.log(content))
 
 
 

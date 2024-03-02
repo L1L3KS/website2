@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 document.addEventListener('DOMContentLoaded', function () {
     var parallax = document.querySelector('.parallax');
 
@@ -39,7 +39,7 @@ function showPage(pageNumber) {
 
     showPage(`page-${currentPage}`);
   }
-=======
+
 document.addEventListener('DOMContentLoaded', function () {
     var parallax = document.querySelector('.parallax');
 
@@ -80,4 +80,4 @@ function showPage(pageNumber) {
 
     showPage(`page-${currentPage}`);
   }
->>>>>>> bb5a506c538ea1543ef8200a9c7075662519fcf7
+

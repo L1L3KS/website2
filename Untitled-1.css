@@ -9,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Добавим этот стиль, чтобы избежать горизонтального скролла */
+    overflow-y: initial;
 }
 
 .verh {

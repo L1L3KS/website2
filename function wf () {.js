@@ -1,10 +1,46 @@
+
+
+const sign = document.getElementById("sign")
+const gmail = document.getElementById("gmail")
+const pass = document.getElementById("pass")
+
+
+sign.addEventListener()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function wf () {
     let number1 = 5
     let number2 = 10
     let rusult = number1 + number2
     console.log(result)
 }
-
 
 let x = 10;
 let y = "1";
@@ -155,3 +191,20 @@ function remind() {
 }
 let krosivki = document.getElementById("vapormax")
 krosivki.addEventListener("mouseover", remind())
+
+
+
+
+let verh = document.getElementById("verh");
+let newE = document.createElement("a");
+let newEcontent = document.createTextNode("Our team");
+
+verh.appendChild(newE)
+newE.appendChild(newEocntent)
+
+
+
+
+
+
+
