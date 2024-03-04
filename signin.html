@@ -9,70 +9,12 @@
 </head>
 <body>
     <div class="boxR">
-        <p><input placeholder="gmail" class="gmail" id="gmail"></p>
-        <p><input placeholder="password" class="password" id="pass"></p>
-        <p><button class="" id="btn">sign in</button></p>
+        <p><input placeholder="gmail" class="gmail" id=""></p>
+        <p><input placeholder="password" class="password" id=""></p>
+        <p><button class="" id="">Sign in</button></p>
         <span class="">
-            <p>Don't have a account?Register</p>
+            <p>Don't have a account? <a href="sign up.html">Register</a></p>
         </span>
     </div>
-
-
-
-    <script type="module"> 
-
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js';
-        import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js';
-        import { getDatabase, ref, set, push } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js';
-        
-        
-                // Your web app's Firebase configuration
-                const firebaseConfig = {
-                    apiKey: "AIzaSyDaxVELpDMHSuvyaY5euodx-2qAfuLhtmQ",
-                    authDomain: "nikestore-5ed52.firebaseapp.com",
-                    databaseURL: "https://nikestore-5ed52-default-rtdb.europe-west1.firebasedatabase.app",
-                    projectId: "nikestore-5ed52",
-                    storageBucket: "nikestore-5ed52.appspot.com",
-                    messagingSenderId: "818550825850",
-                    appId: "1:818550825850:web:0a1824e8d7c4dc22046cc3",
-                };
-        
-        
-                // Initialize Firebase
-                const app = initializeApp(firebaseConfig);
-                const auth = getAuth(app);
-                const db = getDatabase(app);
-        
-                // Function to create a user
-                function createUser(email, password) {
-                    createUserWithEmailAndPassword(auth, email, password)
-                        .then((userCredential) => {
-                            console.log("New user created", userCredential.user);
-                        })
-                        .catch((error) => {
-                            console.error("Error creating user:", error.code, error.message);
-                        });
-                }
-        
-        
-            const gmail = document.getElementById("gmail")
-            const pass = document.getElementById("pass")
-            const btn = document.getElementById("btn")
-            const gmail1 = gmail.value
-            const pass1 = pass.value
-            console.log(gmail1, pass1)
-
-            btn.addEventListener("click", function() {
-            createUser(gmail1, pass1)
-            })
-        
-        
-        
-        
-                
-        
-        
-        </script>
 </body>
 </html>
