@@ -10,14 +10,70 @@
 <body>
     <div class="boxR">
 
-        <p><input placeholder="gmail" class="gmail" id="gmail"></p>
-        <p><input placeholder="password" class="password" id="pass"></p>
+        <p><input type="mail" placeholder="gmail" class="gmail" id="check_mail"></p>
+        <p><input type="password" placeholder="password" class="password" id="check_pass"></p>
 
-        <p><button id="sign" class="">sign in</button></p>
+        <p><button class="" id="signin">Sign in</button></p>
 
-        <p><input placeholder="gmail" class="gmail" id=""></p>
-        <p><input placeholder="password" class="password" id=""></p>
-        <p><button class="" id="">Sign in</button></p>
+        <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js';
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js';
+        import { getDatabase, ref, set, push } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js';
+
+        // import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+        
+                
+                // Your web app's Firebase configuration
+                const firebaseConfig = {
+                    apiKey: "AIzaSyDaxVELpDMHSuvyaY5euodx-2qAfuLhtmQ",
+                    authDomain: "nikestore-5ed52.firebaseapp.com",
+                    databaseURL: "https://nikestore-5ed52-default-rtdb.europe-west1.firebasedatabase.app",
+                    projectId: "nikestore-5ed52",
+                    storageBucket: "nikestore-5ed52.appspot.com",
+                    messagingSenderId: "818550825850",
+                    appId: "1:818550825850:web:0a1824e8d7c4dc22046cc3",
+                };
+        
+
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        const db = getDatabase(app);
+
+
+        function userLogin(email, password) {
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Signed in 
+            const user = userCredential.user;
+            console.log("You are welcome", userCredential.user);
+            alert("You are welcome!")
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            alert("Wrong password!")
+        });
+        }
+
+        const mail = document.getElementById("check_mail")
+        const pass = document.getElementById("check_pass")
+        const btn1 = document.getElementById("signin")
+
+
+        btn1.addEventListener("click", function() { 
+        const gmail1 = mail.value;
+        const pass1 = pass.value;
+
+        console.log(gmail1, pass1)
+        userLogin(gmail1, pass1)
+        })
+    
+        
+
+
+        </script>
+    
 
         <span class="">
             <p>Don't have a account? <a href="sign up.html">Register</a></p>

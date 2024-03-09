@@ -9,8 +9,8 @@
 </head>
 <body>
     <div class="boxR">
-        <p><input placeholder="gmail" class="gmail" id="gmail"></p>
-        <p><input placeholder="password" class="password" id="pass"></p>
+        <p><input type="mail" placeholder="gmail" class="gmail" id="gmail"></p>
+        <p><input type="password" placeholder="password" class="password" id="pass"></p>
         <p><button class="" id="btn">Sign up</button></p>
     </div>
 
@@ -49,6 +49,7 @@
                         })
                         .catch((error) => {
                             console.error("Error creating user:", error.code, error.message);
+                            
                         });
                 }
         
@@ -56,19 +57,20 @@
             const gmail = document.getElementById("gmail")
             const pass = document.getElementById("pass")
             const btn = document.getElementById("btn")
+            // function delay()
+            // {
+
+            // }
+            // setTimeout(delay, 5000)
+
+            btn.addEventListener("click", function() {
             const gmail1 = gmail.value
             const pass1 = pass.value
             console.log(gmail1, pass1)
 
-            btn.addEventListener("click", function() {
             createUser(gmail1, pass1)
             })
-        
-        
-        
-        
-                
-        
+    
         
         </script>
 </body>
