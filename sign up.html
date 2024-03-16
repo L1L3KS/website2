@@ -11,6 +11,7 @@
     <div class="boxR">
         <p><input type="mail" placeholder="gmail" class="gmail" id="gmail"></p>
         <p><input type="password" placeholder="password" class="password" id="pass"></p>
+        <p><input placeholder="your name" class="userNick" id="userN"></p>
         <p><button class="" id="btn">Sign up</button></p>
     </div>
 
@@ -42,14 +43,14 @@
                 const db = getDatabase(app);
         
                 // Function to create a user
-                function createUser(email, password) {
-                    createUserWithEmailAndPassword(auth, email, password)
+                function createUser(email, password, userName) {
+                    createUserWithEmailAndPassword(auth, email, password, userName)
+
                         .then((userCredential) => {
-                            console.log("New user created", userCredential.user);
+                            console.log("Welcome to the system " + `${userName}`, userCredential.user);
                         })
                         .catch((error) => {
                             console.error("Error creating user:", error.code, error.message);
-                            
                         });
                 }
         
@@ -57,6 +58,7 @@
             const gmail = document.getElementById("gmail")
             const pass = document.getElementById("pass")
             const btn = document.getElementById("btn")
+            const userN = document.getElementById("userN")
             // function delay()
             // {
 
@@ -66,9 +68,10 @@
             btn.addEventListener("click", function() {
             const gmail1 = gmail.value
             const pass1 = pass.value
+            const userName = userN.value
             console.log(gmail1, pass1)
 
-            createUser(gmail1, pass1)
+            createUser(gmail1, pass1, userName)
             })
     
         
