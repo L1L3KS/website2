@@ -46,8 +46,8 @@
         .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
-            console.log("You are welcome", userCredential.user);
-            alert("You are welcome!")
+            console.log("Welcome", userCredential.user);
+            alert("Welcome!")
         })
         .catch((error) => {
             const errorCode = error.code;
