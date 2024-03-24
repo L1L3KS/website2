@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+
+
+
+.body {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    flex-direction: center;
+}
+
+#cont {
+    display: flex;
+    width: 25%;
+    height: 60%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.logo {
+    width: 120px;
+    height: 44px;
+    left: 30px;
+    top: 15px;
+    margin-bottom: 25px;
+}
+
+input {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.623);
+    margin-bottom: 12px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    outline: none;
+    padding: 1rem;
+    background: none;
+    z-index: 1;
+}
+
+#signin {
+    background-color: rgb(0, 0, 0);
+    height: 55px;
+    width: 150px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 26px;
+    line-height: 0.00001;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 15px;
+}
+
+#btn {
+    background-color: rgb(0, 0, 0);
+    height: 55px;
+    width: 150px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 26px;
+    line-height: 0.00001;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 15px;
+}
+
+#signin:hover {
+    background-color: rgb(116, 116, 116);
+    box-shadow: none;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: rgb(116, 116, 116);
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.TextBot {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+.TextBotR {
+    color: rgba(32, 118, 248, 0.89);
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+    line-height: 0.1;
+    font-size: 20px;
+}
+
+.TextBotR:hover {
+    color: rgba(168, 202, 253, 0.89);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
