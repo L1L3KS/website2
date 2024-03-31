@@ -3,16 +3,21 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Untitled-1.css">
+    <link rel="stylesheet" href="styles for logreg.css">
     <title>123</title>
     <script src="signin.js"></script>
 </head>
 <body>
-    <div class="boxR">
-        <p><input type="mail" placeholder="gmail" class="gmail" id="gmail"></p>
+    <div class="center">
+    <div class="" id="cont">
+        <img src="Logo_NIKE.svg.png" class="logo">
+        <div>
+        <p><input type="email" placeholder="gmail" class="gmail" id="gmail"></p>
         <p><input type="password" placeholder="password" class="password" id="pass"></p>
-        <p><input placeholder="your name" class="userNick" id="userN"></p>
+        <p><input placeholder="username" class="userNick" id="userN"></p>
+        </div>
         <p><button class="" id="btn">Sign up</button></p>
+    </div>
     </div>
 
 
@@ -35,8 +40,7 @@
                     messagingSenderId: "818550825850",
                     appId: "1:818550825850:web:0a1824e8d7c4dc22046cc3",
                 };
-        
-        
+
                 // Initialize Firebase
                 const app = initializeApp(firebaseConfig);
                 const auth = getAuth(app);
