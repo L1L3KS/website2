@@ -72,8 +72,21 @@
             console.log(gmail1, pass1)
 
             createUser(gmail1, pass1, userName)
+
+            function sendToDB(user, email) 
+            {
+            const newUserRef = push(ref(db, 'userBase'));
+            set(newUserRef, { userBase: userName, email });
+            
+            }
+            sendToDB(userName, gmail1)
+
             })
     
+
+
+
+
         
         </script>
 </body>
