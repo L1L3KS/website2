@@ -24,10 +24,12 @@
 
     <script type="module"> 
 
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js';
-        import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js';
-        import { getDatabase, ref, set, push } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js';
+
+
+                // Import the functions you need from the SDKs you need
+                import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js';
+                import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js';
+                import { getDatabase, ref, set, push } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js';
         
         
                 // Your web app's Firebase configuration
@@ -59,24 +61,24 @@
                 }
         
         
-            const gmail = document.getElementById("gmail")
-            const pass = document.getElementById("pass")
-            const btn = document.getElementById("btn")
-            const userN = document.getElementById("userN")
-            // function delay()
-            // {
+                const gmail = document.getElementById("gmail")
+                const pass = document.getElementById("pass")
+                const btn = document.getElementById("btn")
+                const userN = document.getElementById("userN")
+                // function delay()
+                // {
 
-            // }
-            // setTimeout(delay, 5000)
+                // }
+                // setTimeout(delay, 5000)
 
-            btn.addEventListener("click", function() {
-            const gmail1 = gmail.value
-            const pass1 = pass.value
-            const userName = userN.value
-            console.log(gmail1, pass1)
+                btn.addEventListener("click", function() {
+                const gmail1 = gmail.value
+                const pass1 = pass.value
+                const userName = userN.value
+                console.log(gmail1, pass1)
 
-            createUser(gmail1, pass1, userName)
-            })
+                createUser(gmail1, pass1, userName)
+                })
     
         
         </script>

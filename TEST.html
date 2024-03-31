@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Firebase RealTime Chat</title>
+    <link rel="stylesheet" href="test.css">
+  </head>
+  <body>
+    <header>
+      <h2>Firebase RealTime Chat</h2>
+    </header>
+
+    <div id="chat">
+      <!-- messages will display here -->
+      <ul id="messages"></ul>
+
+      <!-- form to send message -->
+      <form id="message-form">
+        <input id="message-input" type="text" placeholder="message"/>
+        <input id="name-input" type="text" placeholder="name"/>
+        <button id="message-btn" type="submit">Send</button>
+      </form>
+    </div>
+    <!-- scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+    
+    <script>
+       const firebaseConfig = {
+                    apiKey: "AIzaSyDaxVELpDMHSuvyaY5euodx-2qAfuLhtmQ",
+                    authDomain: "nikestore-5ed52.firebaseapp.com",
+                    databaseURL: "https://nikestore-5ed52-default-rtdb.europe-west1.firebasedatabase.app",
+                    projectId: "nikestore-5ed52",
+                    storageBucket: "nikestore-5ed52.appspot.com",
+                    messagingSenderId: "818550825850",
+                    appId: "1:818550825850:web:0a1824e8d7c4dc22046cc3",
+                };
+
+firebase.initializeApp(firebaseConfig);
+
+const db = firebase.database();
+
+const name = document.getElementById("name-input");
+
+const username = name.value;
+
+const button = document.getElementById("message-btn");
+
+button.addEventListener("click", function(){
+    sendMessage()
+})
+
+
+
+
+
+function sendMessage() {
+//   e.preventDefault();
+
+  // get values to be submitted
+  const timestamp = Date.now();
+  const messageInput = document.getElementById("message-input");
+  const message = messageInput.value;
+  const username = name.value;
+
+  // clear the input box
+  messageInput.value = "";
+  username.value = name.value;
+  console.log(message)
+  
+
+  //auto scroll to bottom
+  document
+    .getElementById("messages")
+    .scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+
+  // create db collection and send in the data
+  db.ref("messages/" + timestamp).set({
+    username,
+    message,
+  });
+}
+
+
+const fetchChat = db.ref("messages/");
+
+fetchChat.on("child_added", function (snapshot) {
+  const messages = snapshot.val();
+  const message = `<li class=${
+    username === messages.username ? "sent" : "receive"
+  }><span>${messages.username}: </span>${messages.message}</li>`;
+  // append the message on the page
+  document.getElementById("messages").innerHTML += message;
+});
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
