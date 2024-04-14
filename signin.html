@@ -55,8 +55,9 @@
         .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
-            console.log("Welcome", userCredential.user);
+            console.log("Welcome", window.userName);
             alert("Welcome!")
+
         })
         .catch((error) => {
             const errorCode = error.code;

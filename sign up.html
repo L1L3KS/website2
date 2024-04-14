@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="styles for logreg.css">
     <title>123</title>
     <script src="signin.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/latest/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/latest/firebase-auth.js"></script>
+
 </head>
 <body>
     <div class="center">
@@ -24,11 +28,9 @@
 
     <script type="module"> 
 
-
-
                 // Import the functions you need from the SDKs you need
                 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js';
-                import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js';
+                import { getAuth, createUserWithEmailAndPassword, updateProfile } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js';
                 import { getDatabase, ref, set, push } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js';
         
         
@@ -51,6 +53,8 @@
                 // Function to create a user
                 function createUser(email, password, userName) {
                     createUserWithEmailAndPassword(auth, email, password, userName)
+                    .then( (userCredentials) => {
+                        userCredentials.currentUser.updateProfile({displayName: userName})})
 
                         .then((userCredential) => {
                             console.log("Welcome to the system " + `${userName}`, userCredential.user);
@@ -60,7 +64,7 @@
                         });
                 }
         
-        
+
                 const gmail = document.getElementById("gmail")
                 const pass = document.getElementById("pass")
                 const btn = document.getElementById("btn")
@@ -74,7 +78,7 @@
                 btn.addEventListener("click", function() {
                 const gmail1 = gmail.value
                 const pass1 = pass.value
-                const userName = userN.value
+                window.userName = userN.value
                 console.log(gmail1, pass1)
 
             createUser(gmail1, pass1, userName)
