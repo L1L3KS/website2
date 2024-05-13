@@ -46,3 +46,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // Показываем первую страницу при загрузке страницы
     updatePage();
 });
+
+
+
+
+
+const chatbtn = document.getElementById("chatWindow");
+const iframe = document.getElementById("frame");
+
+chatbtn.addEventListener("click", ()=>{
+    iframe.style.display = "inline";
+
+})
