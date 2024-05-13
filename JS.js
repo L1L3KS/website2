@@ -52,9 +52,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 const chatbtn = document.getElementById("chatWindow");
+const chatbtnHide = document.getElementById("chatWindowHide");
 const iframe = document.getElementById("frame");
+
 
 chatbtn.addEventListener("click", ()=>{
     iframe.style.display = "inline";
-
+    chatbtnHide.style.display = "inline";
+    chatbtn.style.display = "none";
 })
+
+chatbtnHide.addEventListener("click", ()=>{
+    iframe.style.display = "none";
+    chatbtn.style.display = "inline";
+    chatbtnHide.style.display = "none";
+})
+
